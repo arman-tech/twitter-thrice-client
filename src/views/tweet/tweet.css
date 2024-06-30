@@ -1,0 +1,21 @@
+/* textarea {
+  padding: 50px 60px !important;
+}
+*/
+
+.v-textarea .v-field__input {
+  padding: 50px !important;
+}
+
+v-textarea-pad {
+  padding: 50px !important;
+}
+
+/* .v-text-area textarea {
+  padding: 20px 20px !important;
+} */
+
+.v-textarea textarea,
+.v-textarea textarea {
+  padding: 50px !important;
+}
