@@ -3,15 +3,17 @@ import axios from 'axios';
 import { Tweet } from '../models/tweet';
 import { TweetPost } from '../models/tweetPost';
 import { router } from '../routes';
+import { useEnv } from '../common/environment';
 
 interface TweetState {
     tweets: Tweet[];
     errorMessage: string;
 }
 
-const TopTenRecentTweetsUrl = 'https://localhost:7206/api/Tweet/recent';
-const PostTweetUrl = 'https://localhost:7206/api/Tweet/create';
-const PostLoginUrl = 'https://localhost:7206/api/Auth/login';
+const baseUrl = useEnv().baseUrl;
+const TopTenRecentTweetsUrl = baseUrl + 'api/Tweet/recent';
+const PostTweetUrl = baseUrl + 'api/Tweet/create';
+const PostLoginUrl = baseUrl + 'api/Auth/login';
 
 export const useTweetStore = defineStore({
     id: 'tweetStore',
