@@ -3,12 +3,9 @@
         <v-card class="mx-auto pa-12 pb-8 ma-4" elevation="8" max-width="448" rounded="lg">
             <div class="text-subtitle-1 text-medium-emphasis">Make a Tweet</div>
 
-            <v-text-field v-model="username" :rules="usernameRules" placeholder="Username"
-                prepend-inner-icon="mdi-account" variant="outlined" :maxlength="255"></v-text-field>
-
-            <!-- <v-text-field v-model="email" :rules="emailRules" placeholder="Email" prepend-inner-icon="mdi-account"
+            <v-text-field v-model="email" :rules="emailRules" placeholder="Email" prepend-inner-icon="mdi-account"
                 variant="outlined" :maxlength="255"></v-text-field>
- -->
+
             <v-text-field v-model="password" :rules="passwordRules" :maxlength="255"
                 :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'" :type="visible ? 'text' : 'password'"
                 placeholder="Enter your password" prepend-inner-icon="mdi-lock-outline" variant="outlined"

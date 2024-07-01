@@ -39,7 +39,7 @@ export const useTweetStore = defineStore({
         },
         async addTweet(tweet: TweetPost): Promise<Tweet | undefined> {
             try {
-                const freshtoken = await axios.post(PostLoginUrl, { username: tweet.username, password: tweet.password });
+                const freshtoken = await axios.post(PostLoginUrl, { email: tweet.email, password: tweet.password });
 
 
                 if (freshtoken.status !== 200) {
